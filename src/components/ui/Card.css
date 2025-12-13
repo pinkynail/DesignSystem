@@ -1,0 +1,35 @@
+.card {
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Ensure content doesn't spill corners */
+}
+
+.card-header {
+    padding: var(--spacing-3) var(--spacing-4);
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-bg-base);
+    /* keep same as card usually */
+}
+
+.card-title {
+    font-size: var(--font-size-header);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.card-actions {
+    display: flex;
+    gap: var(--spacing-2);
+}
+
+.card-content {
+    padding: var(--spacing-4);
+}

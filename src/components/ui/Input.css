@@ -1,0 +1,60 @@
+.input-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+}
+
+.input-full-width {
+    display: flex;
+    width: 100%;
+}
+
+.input-label {
+    font-size: 13px;
+    /* Slightly smaller for density */
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.input-field {
+    height: 32px;
+    /* Match button height */
+    padding: 0 var(--spacing-2);
+    font-size: var(--font-size-body);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: var(--color-brand-primary);
+    /* Optional: Add a subtle ring if desired, but manifesto says focus rings use brand color */
+    box-shadow: 0 0 0 1px var(--color-brand-primary);
+}
+
+.input-field::placeholder {
+    color: var(--color-text-secondary);
+}
+
+.input-field:disabled {
+    background-color: var(--color-bg-canvas);
+    cursor: not-allowed;
+    color: var(--color-text-secondary);
+}
+
+.input-error {
+    border-color: var(--color-semantic-critical);
+}
+
+.input-error:focus {
+    border-color: var(--color-semantic-critical);
+    box-shadow: 0 0 0 1px var(--color-semantic-critical);
+}
+
+.input-error-msg {
+    font-size: 12px;
+    color: var(--color-semantic-critical);
+}

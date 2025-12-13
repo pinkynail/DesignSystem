@@ -1,0 +1,89 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+    /* Explicit border for consistency */
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--color-brand-primary);
+    outline-offset: 2px;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    filter: grayscale(1);
+}
+
+/* Variants */
+.btn-primary {
+    background-color: var(--color-brand-primary);
+    color: #FFFFFF;
+    border-color: var(--color-brand-primary);
+}
+
+.btn-primary:hover:not(:disabled) {
+    /* Simple darken effect using filter or manual color since we stick to strict tokens, 
+     but standard CSS allows brightness filter */
+    filter: brightness(0.9);
+}
+
+.btn-secondary {
+    background-color: var(--color-bg-base);
+    color: var(--color-text-primary);
+    border-color: var(--color-border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background-color: var(--color-bg-canvas);
+    border-color: var(--color-text-secondary);
+}
+
+.btn-critical {
+    background-color: var(--color-semantic-critical);
+    color: #FFFFFF;
+    border-color: var(--color-semantic-critical);
+}
+
+.btn-critical:hover:not(:disabled) {
+    filter: brightness(0.9);
+}
+
+.btn-ghost {
+    background-color: transparent;
+    color: var(--color-text-primary);
+    border-color: transparent;
+}
+
+.btn-ghost:hover:not(:disabled) {
+    background-color: var(--color-bg-canvas);
+}
+
+/* Sizes */
+.btn-sm {
+    height: 24px;
+    padding: 0 var(--spacing-2);
+    font-size: 13px;
+}
+
+.btn-md {
+    height: 32px;
+    /* Standard for high density */
+    padding: 0 var(--spacing-3);
+    font-size: var(--font-size-body);
+}
+
+.btn-lg {
+    height: 40px;
+    padding: 0 var(--spacing-4);
+    font-size: var(--font-size-header);
+}

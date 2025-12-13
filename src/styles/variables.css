@@ -1,0 +1,53 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=JetBrains+Mono:wght@100..800&display=swap');
+
+:root {
+  /* 
+   * Design System Manifesto (D.S.M. 1.0)
+   * 2. Design Tokens: Spacing & Sizing
+   * Base Unit: 4px
+   */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+
+  /* Global Constant */
+  --radius-sm: 4px;
+
+  /*
+   * 3. Color Palette
+   */
+  /* Brand Primary */
+  --color-brand-primary: #0033FF;
+
+  /* Semantic Colors */
+  --color-semantic-critical: #E3182C; /* Red */
+  --color-semantic-warning: #FF8C00; /* Orange */
+  --color-semantic-success: #00A651; /* Green */
+  --color-semantic-info: #1C6FEA;    /* Blue */
+
+  /* Neutrals */
+  --color-bg-base: #FFFFFF;
+  --color-bg-canvas: #F9FAFB;
+  --color-border: #E5E7EB;
+  --color-text-primary: #1F2937;
+  --color-text-secondary: #6B7280;
+
+  /*
+   * 4. Typography
+   */
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --font-size-body: 14px;
+  --font-size-table: 13px;
+  --font-size-header: 16px;
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+}

@@ -1,0 +1,71 @@
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-base);
+    max-height: 600px;
+    /* needed for sticky header to work within container if scrolling vertically, or just general constraint */
+    position: relative;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: separate;
+    /* Required for sticky headers sometimes, but collapse usually works with th sticky. Let's try collapse first but sticky needs background. */
+    border-spacing: 0;
+}
+
+.data-table th,
+.data-table td {
+    /* Dense: py-2 px-3 -> 8px 12px */
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--color-border);
+
+    /* Text Handling: Prevent wrap */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
+    /* Reasonable max width to force truncate if too long */
+}
+
+/* Sticky Headers: The Table Doctrine */
+.data-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--color-bg-base);
+    /* Ensure opaque background */
+    /* Add subtle border bottom for sticky state if needed, but existing th border handles it */
+    box-shadow: 0 1px 0 var(--color-border);
+    /* Better than border for sticky context */
+}
+
+.data-table th {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-align: left;
+}
+
+.data-table td {
+    font-size: var(--font-size-table);
+    color: var(--color-text-primary);
+}
+
+.data-table tbody tr:hover {
+    background-color: #F3F4F6;
+}
+
+/* Row Actions: Right aligned in last column */
+/* We can target the last cell or use a specific class */
+.data-table td.actions-cell {
+    text-align: right;
+    position: sticky;
+    right: 0;
+    background-color: inherit;
+    /* Match row bg */
+}
