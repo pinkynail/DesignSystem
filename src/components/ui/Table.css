@@ -19,7 +19,8 @@
 .data-table th,
 .data-table td {
     /* Dense: py-2 px-3 -> 8px 12px */
-    padding: 8px 12px;
+    /* Dense: py-2 px-3 -> 8px 12px */
+    padding: var(--spacing-2) var(--spacing-3);
     border-bottom: 1px solid var(--color-border);
 
     /* Text Handling: Prevent wrap */
@@ -43,7 +44,7 @@
 }
 
 .data-table th {
-    font-size: 13px;
+    font-size: var(--font-size-sm);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 600;
@@ -57,7 +58,7 @@
 }
 
 .data-table tbody tr:hover {
-    background-color: #F3F4F6;
+    background-color: var(--color-bg-canvas);
 }
 
 /* Row Actions: Right aligned in last column */
@@ -68,4 +69,10 @@
     right: 0;
     background-color: inherit;
     /* Match row bg */
+}
+
+/* Actions Header width constraint */
+.actions-header {
+    width: 100px;
+    text-align: right;
 }

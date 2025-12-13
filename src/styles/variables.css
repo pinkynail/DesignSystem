@@ -26,10 +26,15 @@
   --color-brand-primary: #0033FF;
 
   /* Semantic Colors */
-  --color-semantic-critical: #E3182C; /* Red */
-  --color-semantic-warning: #FF8C00; /* Orange */
-  --color-semantic-success: #00A651; /* Green */
-  --color-semantic-info: #1C6FEA;    /* Blue */
+  --color-semantic-critical: #E3182C;
+  /* Red */
+  --color-semantic-warning: #FF8C00;
+  /* Orange */
+  --color-semantic-success: #00A651;
+  /* Green */
+  --color-semantic-info: #1C6FEA;
+  /* Blue */
+  --color-text-inverse: #FFFFFF;
 
   /* Neutrals */
   --color-bg-base: #FFFFFF;
@@ -45,8 +50,11 @@
   --font-mono: 'JetBrains Mono', monospace;
 
   --font-size-body: 14px;
-  --font-size-table: 13px;
+  --font-size-sm: 13px;
+  --font-size-xs: 12px;
+  --font-size-table: var(--font-size-sm);
   --font-size-header: 16px;
+  --font-size-xl: 24px;
 
   --font-weight-regular: 400;
   --font-weight-semibold: 600;

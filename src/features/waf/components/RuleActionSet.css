@@ -1,0 +1,9 @@
+.rule-action-set {
+    display: flex;
+    gap: var(--spacing-2);
+    justify-content: flex-end;
+}
+
+.icon-critical {
+    color: var(--color-semantic-critical);
+}

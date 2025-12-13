@@ -27,7 +27,7 @@
 /* Variants */
 .btn-primary {
     background-color: var(--color-brand-primary);
-    color: #FFFFFF;
+    color: var(--color-text-inverse);
     border-color: var(--color-brand-primary);
 }
 
@@ -50,7 +50,7 @@
 
 .btn-critical {
     background-color: var(--color-semantic-critical);
-    color: #FFFFFF;
+    color: var(--color-text-inverse);
     border-color: var(--color-semantic-critical);
 }
 
@@ -70,20 +70,20 @@
 
 /* Sizes */
 .btn-sm {
-    height: 24px;
+    height: var(--spacing-6);
     padding: 0 var(--spacing-2);
-    font-size: 13px;
+    font-size: var(--font-size-sm);
 }
 
 .btn-md {
-    height: 32px;
+    height: var(--spacing-8);
     /* Standard for high density */
     padding: 0 var(--spacing-3);
     font-size: var(--font-size-body);
 }
 
 .btn-lg {
-    height: 40px;
+    height: var(--spacing-10);
     padding: 0 var(--spacing-4);
     font-size: var(--font-size-header);
 }

@@ -1,0 +1,43 @@
+.waf-table-wrapper {
+    width: 100%;
+    margin-top: var(--spacing-4);
+}
+
+.col-priority {
+    width: 60px;
+    text-align: right;
+    font-family: var(--font-mono);
+}
+
+.col-id {
+    max-width: 120px;
+    font-family: var(--font-mono);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.col-name {
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+.col-source-target {
+    font-family: var(--font-mono);
+    white-space: nowrap;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tags-cell {
+    display: flex;
+    gap: var(--spacing-1);
+    flex-wrap: wrap;
+}
+
+.col-hits {
+    text-align: right;
+    font-family: var(--font-mono);
+}

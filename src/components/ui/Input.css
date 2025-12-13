@@ -10,14 +10,14 @@
 }
 
 .input-label {
-    font-size: 13px;
+    font-size: var(--font-size-sm);
     /* Slightly smaller for density */
     font-weight: var(--font-weight-semibold);
     color: var(--color-text-primary);
 }
 
 .input-field {
-    height: 32px;
+    height: var(--spacing-8);
     /* Match button height */
     padding: 0 var(--spacing-2);
     font-size: var(--font-size-body);
@@ -55,6 +55,6 @@
 }
 
 .input-error-msg {
-    font-size: 12px;
+    font-size: var(--font-size-xs);
     color: var(--color-semantic-critical);
 }

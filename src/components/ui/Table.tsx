@@ -41,7 +41,7 @@ export function Table<T extends Record<string, any>>({
                                 {col.header}
                             </th>
                         ))}
-                        {actions && <th className="actions-header" style={{ width: '100px', textAlign: 'right' }}>Actions</th>}
+                        {actions && <th className="actions-header">Actions</th>}
                     </tr>
                 </thead>
                 <tbody>
