@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Table, Column } from '../../../components/ui/Table';
+import { Table, type Column } from '../../../components/ui/Table';
 import { Badge } from '../../../components/ui/Badge';
 import { RuleActionSet } from './RuleActionSet';
 import './WafRulesTable.css';
