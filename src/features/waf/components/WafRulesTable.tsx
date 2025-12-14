@@ -17,16 +17,24 @@ interface WafRule {
 }
 
 const generateMockRules = (count: number): WafRule[] => {
-    return Array.from({ length: count }).map((_, i) => ({
-        id: `rule-${Math.random().toString(36).substr(2, 6)}`,
-        priority: 100 + i * 10,
-        name: `Block Malicious IP Range ${i + 1}`,
-        source: `192.168.${i}.${Math.floor(Math.random() * 255)}/24`,
-        target: 'All Apps',
-        tags: i % 2 === 0 ? ['security', 'block'] : ['geo', 'rate-limit'],
-        status: Math.random() > 0.3 ? 'active' : 'inactive',
-        hits: Math.floor(Math.random() * 10000)
-    }));
+    return Array.from({ length: count }).map((_, i) => {
+        // Stress test IPv6 on some rows
+        const isIPv6 = i < 3;
+        const source = isIPv6
+            ? '2001:0db8:85a3:0000:0000:8a2e:0370:7334'
+            : `192.168.${i}.${Math.floor(Math.random() * 255)}/24`;
+
+        return {
+            id: `rule-${Math.random().toString(36).substr(2, 6)}`,
+            priority: 100 + i * 10,
+            name: `Block Malicious IP Range ${i + 1}`,
+            source,
+            target: 'All Apps',
+            tags: i % 2 === 0 ? ['security', 'block'] : ['geo', 'rate-limit'],
+            status: Math.random() > 0.3 ? 'active' : 'inactive',
+            hits: Math.floor(Math.random() * 10000)
+        };
+    });
 };
 
 export const WafRulesTable: React.FC = () => {
@@ -38,7 +46,7 @@ export const WafRulesTable: React.FC = () => {
             header: 'Pri',
             className: 'col-priority',
             align: 'right',
-            width: '60px'
+            width: '50px'
         },
         {
             key: 'id',
@@ -82,9 +90,10 @@ export const WafRulesTable: React.FC = () => {
         },
         {
             key: 'hits',
-            header: 'Hits (24h)',
+            header: 'Hits',
             className: 'col-hits',
             align: 'right',
+            width: '70px',
             render: (rule) => rule.hits.toLocaleString()
         }
     ];

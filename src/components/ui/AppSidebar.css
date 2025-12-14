@@ -1,0 +1,19 @@
+/* Sidebar */
+.app-sidebar {
+    width: 240px;
+    background-color: var(--color-bg-sidebar);
+    color: var(--color-text-sidebar);
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-4);
+}
+
+.sidebar-title {
+    font-size: var(--font-size-header);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-8);
+}

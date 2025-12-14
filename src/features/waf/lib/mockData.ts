@@ -1,4 +1,4 @@
-import { WafRule, RuleStatus, Severity, WafAction } from '../types';
+import type { WafRule, RuleStatus, Severity, WafAction } from '../types';
 
 const SEVERITIES: Severity[] = ['low', 'medium', 'high', 'critical'];
 const STATUSES: RuleStatus[] = ['active', 'inactive', 'learning'];
